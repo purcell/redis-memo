@@ -1,0 +1,23 @@
+# redis-memo
+
+Provides variants of Clojure's "memoize" function and "defn-memo" macro which
+use redis as an out-of-process store for cached results.
+
+## Usage
+
+(defn-redis-memo my-function [a b]
+   ...)
+
+or
+
+(def my-alias (memoize-with-redis "a-key-prefix" other-func))
+
+## Installation
+
+Via clojars is recommended:
+
+  http://clojars.org/org.clojars.sanityinc/redis-memo
+
+## License
+
+BSD
