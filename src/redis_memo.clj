@@ -17,7 +17,7 @@
   "Encode an object so that it is safe to pass to Redis, which complains about key
 strings containing spaces etc. (redis-clojure doesn't escape keys)"
   [value]
-  (with-bindings [*print-level* nil]
+  (binding [*print-level* nil]
     (pr-str value)))
 
 (defn- decode-value [value]
